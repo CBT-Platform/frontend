@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "rm -rf .next",
-    "deploy": "git pull origin main && npm run build && pm2 restart nextjs-app"
+    "deploy": "git pull origin main && npm run build && pm2 show nextjs-app || pm2 start ecosystem.config.js && pm2 restart nextjs-app"
   },
   "dependencies": {
     "react": "^19.0.0",
